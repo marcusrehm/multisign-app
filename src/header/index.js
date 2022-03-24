@@ -72,7 +72,7 @@ export function Wallet() {
                     <Button text='unsync' onClick={() => context.disconnectWallet()} /> :
                     <Button text='sync' onClick={() => context.connectWallet()} />
                 }
-            </div>
+            </div> 
         </div>
     );
 }
