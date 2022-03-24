@@ -42,14 +42,37 @@ export function Wallet() {
     const context = useContext(MultisigContext);
 
     return (
-        <div className='sync-container'>
-            {context.activeAccount &&
-                <TezosAddressLink address={context.activeAccount.address} shorten />
-            }
-            {context.activeAccount?
-                <Button text='unsync' onClick={() => context.disconnectWallet()} /> :
-                <Button text='sync' onClick={() => context.connectWallet()} />
-            }
+        <div>
+            {/* <div className='network-selector'>
+                <label className='form-input'>Network:
+                    {' '}
+                    <input
+                        type='text'
+                        list='networks'
+                        spellCheck='false'
+                        minLength='36'
+                        maxLength='36'
+                        className='contract-address-input'
+                        // defaultValue={context.network}
+                        value={context.network}
+                        // onMouseDown={() => setContractAddress('')}
+                        onChange={(e) => context.network = e.target.value }
+                    />
+                    <datalist id='networks'>
+                        <option value='mainnet'></option>
+                        <option value='hangzhounet'></option>
+                    </datalist>
+                </label>
+            </div> */}
+            <div className='sync-container'>
+                {context.activeAccount &&
+                    <TezosAddressLink address={context.activeAccount.address} shorten />
+                }
+                {context.activeAccount?
+                    <Button text='unsync' onClick={() => context.disconnectWallet()} /> :
+                    <Button text='sync' onClick={() => context.connectWallet()} />
+                }
+            </div>
         </div>
     );
 }

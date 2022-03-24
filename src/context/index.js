@@ -15,8 +15,8 @@ const multisigContractCode = require('../contract/multisigContract.json');
 const multisigContractMetadata = require('../contract/multisigMetadata.json');
 
 // Define the default network and multisig contract address
-const defaultNetwork = 'mainnet';
-const defaultContractAddress = 'KT1PKBTVmdxfgkFvSeNUQacYiEFsPBw16B4P';
+const defaultNetwork = 'hangzhounet';
+const defaultContractAddress = 'KT1GjrdvPpBspsh5fpRp3VHcR1MY2nZZetDt';
 
 // Clear the multisig local storage if the stored network does not coincide with the default
 if (window.localStorage.multisigNetwork !== defaultNetwork) {
